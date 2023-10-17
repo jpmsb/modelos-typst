@@ -1,3 +1,43 @@
+#let ifsc-logo = {
+    let quadradoVerde = rect(radius: 1pt, fill: rgb("32a041"), width: 15pt, height: 15pt)
+    let quadradoBranco = rect(radius: 1pt, fill: white, width: 15pt, height: 15pt)
+    let circulo = circle(fill: rgb("c8191e"), radius: 7.5pt)
+
+    set text(font: "Carlito")
+    
+    grid(
+        columns: (auto),
+        rows: 5,
+        gutter: 0.5pt,
+        
+        align(center)[
+            #grid(
+                columns: 3,
+                rows: 2,
+                gutter: 3pt,
+
+                circulo,
+                quadradoVerde,
+                quadradoVerde,
+                quadradoVerde,
+                quadradoVerde,
+                quadradoBranco,
+                quadradoVerde,
+                quadradoVerde,
+                quadradoVerde,
+                quadradoVerde,
+                quadradoVerde,
+                quadradoBranco
+            ),
+            #text(weight: "bold", 22pt)[INSTITUTO \ FEDERAL],
+
+            #text(18pt)[Santa Catarina],
+            #line(length: 50%, stroke: 1pt + rgb("32a041")),
+            #text(18pt)[Câmpus \ São José]
+        ]
+    )
+}
+
 #let capa(titulo, subtitulo, curso, disciplina, professor, aluno, data) = {
   set text(lang: "pt")
   set text(font: "Carlito")
@@ -7,7 +47,8 @@
   )
 
   align(center + top)[
-    #image("imagens/ifsc-v.png", height: 22.2%)
+    // #image("imagens/ifsc-v.png", height: 22.2%)
+    #ifsc-logo
   ]
 
   grid(rows: 100pt)
