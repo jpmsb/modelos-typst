@@ -1,4 +1,4 @@
-# Modelos de reltório com o Typst
+# Modelos de relatório com o Typst
 
 Para utilizar esse modelo, basta importar o arquivo [relatorio.typ](relatorio/relatorio.typ) no seu arquivo principal:
 
